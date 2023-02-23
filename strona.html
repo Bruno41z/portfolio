@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kalkulator</title>
+
+    <style>
+        body {
+            background-color: bisque;
+        }
+
+        .guzik {
+            border: dashed 3px black;
+            background-color: antiquewhite;
+            color: black;
+        }
+
+        .guzik:hover {
+            border: dashed 3px black;
+            background-color: antiquewhite;
+            color: black;
+            cursor: pointer;
+        }
+
+        .guzik:active {
+            border: solid 3px rgb(225, 14, 14);
+            background-color: black;
+            color: antiquewhite;
+            border-radius: 3cm;
+            width: 100px;
+        }
+
+        .div1 {
+            text-align: center;
+        }
+
+        #wynik {
+            font-size: 40px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+    </style>
+
+    <script>
+
+        function dodaj() {
+
+            let a = document.getElementById("liczba1").value;
+            let b = document.getElementById("liczba2").value;
+
+            a = parseInt(a);
+            b = parseInt(b);
+
+            let dodawanie = a + b;
+
+            document.getElementById("wynik").innerHTML = dodawanie.toFixed(2);
+
+        }
+
+        //
+
+        function odejmij() {
+
+            let a = document.getElementById("liczba1").value;
+            let b = document.getElementById("liczba2").value;
+
+            a = parseInt(a);
+            b = parseInt(b);
+
+            let odejmowanie = a - b;
+
+            document.getElementById("wynik").innerHTML = odejmowanie.toFixed(2);
+
+        }
+
+        //
+
+        function mnoz() {
+
+            let a = document.getElementById("liczba1").value;
+            let b = document.getElementById("liczba2").value;
+
+            a = parseInt(a);
+            b = parseInt(b);
+
+            let mnoz = a * b;
+
+            document.getElementById("wynik").innerHTML = mnoz.toFixed(2);
+
+        }
+
+        //
+
+        function podziel() {
+
+            let a = document.getElementById("liczba1").value;
+            let b = document.getElementById("liczba2").value;
+
+            a = parseInt(a);
+            b = parseInt(b);
+
+            let dziel = a / b;
+
+            document.getElementById("wynik").innerHTML = dziel.toFixed(2);
+
+
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+    <div class="div1">
+
+        <h3>Wprowadź pierwszą liczbę:</h3>
+        <p><input type="number" id="liczba1" /></p>
+        <h3>Wprowadź drugą liczbę:</h3>
+        <p><input type="number" id="liczba2" /></p>
+
+        <h3>Wybierz działanie do wykonania:</h3>
+        <p><input type="button" id="przycisk" class="guzik" value="Dodać" onclick="dodaj()" /></p>
+        <p><input type="button" id="przycisk2" class="guzik" value="Odjąć" onclick="odejmij()" /></p>
+        <p><input type="button" id="przycis3" class="guzik" value="Pomnożyć" onclick="mnoz()" /></p>
+        <p><input type="button" id="przycisk4" class="guzik" value="Podzielić" onclick="podziel()" /></p>
+
+
+        <h3 id="wynik"></h3>
+
+    </div>
+
+</body>
+
+</html>
